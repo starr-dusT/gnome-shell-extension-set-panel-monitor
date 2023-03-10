@@ -1,0 +1,8 @@
+{
+  "name": "Set Gnome Panel to Monitor",
+  "description": "Move Gnome panel to desired monitor.",
+  "uuid": "gnome-panel-to-monitor@starr-dusT.github.com",
+  "shell-version": [
+    "43"
+  ]
+}
