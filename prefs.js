@@ -10,20 +10,17 @@ function init() {
 }
 
 function fillPreferencesWindow(window) {
-    // Use the same GSettings schema as in `extension.js`
+
     const settings = ExtensionUtils.getSettings(
-        'org.gnome.shell.extensions.gnome-panel-to-monitor');
+        'org.gnome.shell.extensions.gnome-set-panel-monitor');
     
-    // Create a preferences page and group
     const page = new Adw.PreferencesPage();
     const group = new Adw.PreferencesGroup();
     page.add(group);
 
-    // Create a new preferences row
-    const row = new Adw.ActionRow({ title: 'Monitor index for panel ' });
+    const row = new Adw.ActionRow({ title: 'Set Monitor Index for Panel' });
     group.add(row);
 
-    // Create the switch and bind its value to the `show-indicator` key
     const button = new Gtk.SpinButton({
         adjustment: new Gtk.Adjustment({
             lower: 0,
@@ -31,6 +28,7 @@ function fillPreferencesWindow(window) {
             step_increment: 1
         })
     });
+
     settings.bind(
         'monitor-index',
         button,
@@ -38,10 +36,7 @@ function fillPreferencesWindow(window) {
         Gio.SettingsBindFlags.DEFAULT
     );
 
-    // Add the switch to the row
     row.add_suffix(button);
     row.activatable_widget = button;
-
-    // Add our page to the window
     window.add(page);
 }
