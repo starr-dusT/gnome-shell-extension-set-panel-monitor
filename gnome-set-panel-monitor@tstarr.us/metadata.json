@@ -3,6 +3,6 @@
   "description": "Move Gnome panel to desired monitor.",
   "uuid": "gnome-set-panel-monitor@starr-dusT.github.com",
   "shell-version": [
-    "43"
+    "45"
   ]
 }
