@@ -3,7 +3,5 @@
   "description": "Set monitor for panel to appear on.",
   "uuid": "gnome-set-panel-monitor@tstarr.us",
   "settings-schema": "org.gnome.shell.extensions.gnome-set-panel-monitor",
-  "shell-version": [
-    "46"
-  ]
+  "shell-version": ["45", "46", "47"]
 }
