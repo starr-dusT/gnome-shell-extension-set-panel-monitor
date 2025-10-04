@@ -37,7 +37,7 @@ export default class PlainExampleExtension extends Extension {
     }
 
     enable() {
-        this.settings = this.getSettings('org.gnome.shell.extensions.gnome-set-panel-monitor');
+        this.settings = this.getSettings('org.gnome.shell.extensions.set-panel-monitor');
         this.settings.connect('changed::' + 'monitor-index', this._movePanel.bind(this))
         // Update position of bar when monitors plug/unplug
         let MM = global.backend.get_monitor_manager();
